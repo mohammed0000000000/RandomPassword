@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+:root{
+    --main-color:#1f886c;
+    --background-color:#002339;
+}
+body{
+    background-color: var(--background-color);
+}
+.container{
+    margin: 100px auto;
+    padding: 10px 100px;
+    width: 700px;
+}
+.container h1{
+    margin: 10px;
+    padding: 10px;
+}
+.container .first{
+    color:white;
+}
+.container .second{
+    color:var(--main-color);
+    position: relative;
+}
+.container .second::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    left: 0;
+    bottom: -10px;
+}
+.container .display{
+    display: flex;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 15px;
+    text-align: center;
+    align-items: center;
+}
+.container .display img{
+    width: 15px;
+}
+.container .display img:hover{
+    cursor: pointer;
+}
+.container input[type='text']{
+    width: calc(100% - 15px);
+    border: none;
+    padding: 5px;
+    outline: none;
+    font-size: 15px;
+}
+
+.container .click{
+    background-color: var(--main-color);
+    width: fit-content;
+    margin: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.container .click img{
+    width: 12px;
+}
+.container .click input[type='button']{
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+}
+.container .click:hover{
+    cursor: pointer;
+}
+.container .click input[type='button']:hover{
+    cursor: pointer;
+}
