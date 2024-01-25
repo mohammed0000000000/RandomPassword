@@ -13,11 +13,15 @@ function getRandInt(min, max) {
 }
 function generatePassword() {
     let password = "";
-    for (let i = 1; i <= 3; i++) {
-        password += uppercase[getRandInt(0, uppercase.length - 1)];
-        password += lowercase[getRandInt(0, lowercase.length - 1)];
-        password += number[getRandInt(0, number.length - 1)];
-        password += symboles[getRandInt(0, symboles.length - 1)];
+    const len = 12;
+    let allChars = uppercase + lowercase + number + symboles;
+    password += uppercase[getRandInt(0, uppercase.length - 1)];
+    password += lowercase[getRandInt(0, lowercase.length - 1)];
+    password += number[getRandInt(0, number.length - 1)];
+    password += symboles[getRandInt(0, symboles.length - 1)];
+    
+    while (password.length < len) {
+        password += allChars[getRandInt(0, allChars.length - 1)];
     }
     return password;
 }
